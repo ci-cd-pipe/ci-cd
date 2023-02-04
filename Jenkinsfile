@@ -1,7 +1,7 @@
 pipeline {
   agent {
     kubernetes {
-      yaml '''
+      yaml """
         apiVersion: v1
         kind: Pod
         metadata:
@@ -25,7 +25,7 @@ pipeline {
             tty: true
             securityContext: 
               privileged: true 
-        '''
+        """
     }
   }
   triggers {
